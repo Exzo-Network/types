@@ -12,6 +12,33 @@ import { SolanaChain } from './SolanaChain'
 
 // chainNames aligned with https://github.com/ethereum-lists/chains/tree/master/_data/chains
 export const supportedEVMChains: EVMChain[] = [
+   // 1229 - Exzo Network
+  {
+    key: ChainKey.EXZO,
+    chainType: ChainType.EVM,
+    name: 'Exzo Network Mainnet',
+    coin: CoinKey.EXZO,
+    id: 1229,
+    mainnet: true,
+    logoURI:
+      'https://raw.githubusercontent.com/ExzoNetwork/assets/master/blockchains/exzo/info/logo.png',
+    tokenlistUrl: 'https://exzonetwork.mypinata.cloud/ipfs/QmUPqH1zEtDKisMRKa12tnWSPf9HQQmH1RBynhaDd4qdxt',
+    multicallAddress: multicallAddresses[ChainId.EXZO],
+
+    metamask: {
+      chainId: prefixChainId(1229),
+      blockExplorerUrls: ['https://exzoscan.io/'],
+      chainName: 'Exzo Network Mainnet',
+      nativeCurrency: {
+        name: 'Exzo',
+        symbol: 'XZO',
+        decimals: 18,
+      },
+      rpcUrls: [
+        'https://mainnet.exzo.technology',
+      ],
+    },
+  },
   // 1 - Ethereum
   {
     key: ChainKey.ETH,
